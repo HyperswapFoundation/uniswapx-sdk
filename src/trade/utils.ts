@@ -6,6 +6,7 @@ export enum NativeAssets {
   BNB = "BNB",
   AVAX = "AVAX",
   ETH = "ETH",
+  HYPE = "HYPE",
 }
 
 function nativeCurrencyAddressString(chainId: number): string {
@@ -16,6 +17,8 @@ function nativeCurrencyAddressString(chainId: number): string {
       return NativeAssets.BNB;
     case ChainId.AVALANCHE:
       return NativeAssets.AVAX;
+    case 999:
+      return NativeAssets.HYPE;
     default:
       return NativeAssets.ETH;
   }
