@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "target": "es6",
+    "rootDir": "src",
     "module": "commonjs",
     "importHelpers": true,
     "declaration": true,

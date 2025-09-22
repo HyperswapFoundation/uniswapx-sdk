@@ -5,8 +5,8 @@ import { Interface } from "@ethersproject/abi";
 import { hexConcat } from "@ethersproject/bytes";
 import { BaseProvider } from "@ethersproject/providers";
 
-import deploylessMulticall2Abi from "../../abis/deploylessMulticall2.json";
-import multicall2Abi from "../../abis/multicall2.json";
+import deploylessMulticall2Abi from "../abis/deploylessMulticall2.json";
+import multicall2Abi from "../abis/multicall2.json";
 import { MULTICALL_ADDRESS } from "../constants";
 import { Multicall2__factory } from "../contracts";
 

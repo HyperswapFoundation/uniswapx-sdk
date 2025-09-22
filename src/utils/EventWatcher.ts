@@ -5,7 +5,7 @@ import {
 } from "@ethersproject/providers";
 import { BaseContract, BigNumber, Event, utils } from "ethers";
 
-import MockERC20Abi from "../../abis/MockERC20.json";
+import MockERC20Abi from "../abis/MockERC20.json";
 import {
   ExclusiveDutchOrderReactor,
   ExclusiveDutchOrderReactor__factory,

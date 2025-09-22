@@ -1,13 +1,22 @@
 {
   "name": "@hyper-swap-labs/uniswapx-sdk",
   "author": "Uniswap",
-  "version": "2.0.1-alpha.10",
+  "version": "2.0.1-alpha.15",
   "license": "MIT",
-  "main": "dist/src/index.js",
-  "typings": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",                
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": "./dist/*"
+  },
   "engines": {
     "node": ">=10"
   },
@@ -22,7 +31,7 @@
     "test:unit": "jest --testPathPattern src --detectOpenHandles --forceExit --testPathIgnorePatterns dist",
     "test:integration": "yarn build && cd integration && yarn && yarn test",
     "prepare": "npm run build",
-    "typechain": "typechain --target=ethers-v5 --out-dir src/contracts --glob ./abis/**/*.json"
+    "typechain": "typechain --target=ethers-v5 --out-dir src/contracts --glob ./src/abis/**/*.json"
   },
   "peerDependencies": {},
   "husky": {
@@ -30,7 +39,6 @@
       "pre-commit": "yarn fix"
     }
   },
-  "module": "dist/uniswapx-sdk.esm.js",
   "devDependencies": {
     "@typechain/ethers-v5": "^10.1.0",
     "@types/jest": "^29.0.3",
